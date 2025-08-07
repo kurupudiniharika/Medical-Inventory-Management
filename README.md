@@ -1,7 +1,4 @@
 # Medical-Inventory-Management
-Here is **everything you provided earlier** and that I saved related to your **Medical Inventory Management System** Salesforce project — consolidated **exactly** as per your information and requests:
-
----
 
 ## 🏥 **Medical Inventory Management System**
 
@@ -93,7 +90,7 @@ Here is **everything you provided earlier** and that I saved related to your **M
 | Admin                        | Full access                        |
 | Inventory Manager            | Create/Update Products, Orders     |
 | Viewer                       | Read-only reports                  |
-| Supplier Role (optional)\*\* | Limited visibility of own supplies |
+| Supplier Role                | Limited visibility of own supplies |
 
 #### 9. **Lightning App Builder**
 
@@ -109,33 +106,6 @@ Here is **everything you provided earlier** and that I saved related to your **M
 
 ---
 
-### 🌐 **Experience Cloud (Optional)**
 
-* Publish app as a **public or internal site** (if license permits)
-* Add **Lightning Components**, **Record Pages**, **Navigation Menus**, **Logos**, etc.
-* Use **Lightning App Builder** to expose records
-* Can add site branding for client/hospital name
 
----
 
-### 💬 **How to Explain the Project in Interview**
-
-> "I developed a Medical Inventory Management System using Salesforce's declarative tools. It allows inventory managers to track medical products, suppliers, purchase orders, and issue transactions. I used Flows to automate stock updates and expiry alerts. Custom validation rules ensure data integrity. I built reports and dashboards for real-time monitoring and decision-making. This project demonstrates my ability to design scalable CRM-based solutions for operational efficiency."
-
----
-
-### 📄 **For Resume**
-
-**Medical Inventory Management System | Salesforce Developer Edition**
-
-> Developed a Salesforce-based inventory app for hospitals using custom objects, Flows, validation rules, and dashboards to automate stock management, supplier tracking, and expiry alerts. Implemented secure role-based access and real-time reporting.
-
----
-
-Would you like me to:
-
-* ✅ Export this as a **PDF** or **Word Document**?
-* ✅ Create a **README** for GitHub with this content?
-* ✅ Design a **PowerPoint/Slide deck** for presentations?
-
-Let me know and I’ll generate it for you!
