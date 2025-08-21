@@ -1,77 +1,71 @@
-# Medical-Inventory-Management
+# 📦 Medical Inventory Management (Salesforce Project)
 
-## 🏥 **Medical Inventory Management System**
+## 📖 Overview
+The **Medical Inventory Management System** is a Salesforce-based solution designed to efficiently track and manage medical products, suppliers, purchase orders, and stock transactions.  
+The project uses **Custom Objects, Relationships, Validation Rules, Flows, Apex Triggers, Reports, and Dashboards** to automate and streamline the healthcare inventory process.
 
 **Platform:** Salesforce Developer Edition
-**Type:** Internship/Academic Project
 **Technology:** Salesforce CRM (Admin + Declarative + Automation)
+---
+
+## 🏆 Project Milestones  
+
+### 📌 1. Object Creation  
+
+**Custom Objects & Key Fields**
+- **Product** → Product ID, Unit Price, Product Name, Current Stock Level, Product Description, Minimum Stock Level 
+- **Supplier** → Name, ID, Contact Person, Location, Email, Phone Number, Address 
+- **Purchase Order** → Order ID, Supplier ID Lookup, Order Date, Status, Expected Delivery Date, Actual Delivery Date, Total Order Cost
+- **Inventory Transaction** → Product Lookup, Transaction Type (Issue / Receive), Quantity, Date
+- **Order Items** → Order Item ID, Purchase Order ID, Quantity Ordered, Quantity Received, Product Lookup
+
+**Relationships**
+- Supplier ↔ Product → Lookup  
+- Purchase Order ↔ Products → Junction Object  
+- Product ↔ Transactions → Lookup  
 
 ---
 
-### 🔧 **Hardware/Software Requirements**
-
-* **Device**: Laptop/Desktop
-* **Internet**: Required
-* **Salesforce Developer Org**: Free edition
-* **VS Code** (optional for SFDX operations)
-* **Browser**: For interaction with Lightning App UI
+### 📌 2. Validation Rules  
+Ensure:
+- **Expiry_Date > Manufacture_Date**  
+- **Quantity ≥ 0** (no negative values)  
+- Mandatory fields must not be left blank  
 
 ---
 
-### 📘 **Project Objective / User Story**
+### 📌 3. Automation with Flows  
 
-> A complete Medical Inventory Management System built on Salesforce to manage and streamline various aspects of hospital or clinic inventory. It ensures efficient tracking of suppliers, purchase orders, product inventory, transactions, expiry date alerts, and more. The goal is to improve operational efficiency, data accuracy, and real-time monitoring using Salesforce’s declarative tools.
-
----
-
-### 🔨 **Key Components Built**
-
-#### 1. **Custom Objects**
-
-| Object             | Fields                                                                               |
-| ------------------ | ------------------------------------------------------------------------------------ |
-| **Product**        | Product Name, Batch Number, Quantity, Expiry Date, Manufacture Date, Supplier Lookup |
-| **Supplier**       | Name, Contact Info, Address, Email                                                   |
-| **Purchase Order** | Supplier Lookup, Order Date, Products (via junction object)                          |
-| **Transaction**    | Product Lookup, Transaction Type (Issue/Receive), Quantity, Date                     |
-
-#### 2. **Relationships**
-
-* Lookup and Master-Detail Relationships:
-
-  * Supplier ↔ Product (Lookup)
-  * Purchase Order ↔ Products (via junction object)
-  * Product ↔ Transactions (Lookup)
-
-#### 3. **Validation Rules**
-
-* Ensure:
-
-  * `Expiry_Date > Manufacture_Date`
-  * Quantity cannot be negative
-  * Mandatory fields not left blank
-
-#### 4. **Automation using Flows**
-
-| Flow Type            | Use Case                                              |
-| -------------------- | ----------------------------------------------------- |
-| **Record-Triggered** | Update stock when new transaction is logged           |
-| **Scheduled Flow**   | Daily check for near-expiry and expired products      |
+| Flow Type          | Purpose |
+|--------------------|---------|
+| **Record-Triggered** | Update stock automatically when a new transaction is logged |
+| **Scheduled Flow**   | Daily check for near-expiry and expired products |
 | **Screen Flow**      | Guided form to create Purchase Orders or Transactions |
 
-#### 5. **Apex Triggers (Optional if needed)**
+---
 
-* Auto-adjust stock quantities
-* Restrict deletion of related records
+### 📌 4. Apex Triggers 
+- Automatically adjust stock quantities after transactions  
+- Restrict deletion of related records (e.g., prevent deleting a product with active transactions)  
 
-#### 6. **Reports**
+---
 
-* Expired Products
-* Low Stock Items
-* Supplier-based Orders
-* Product Transaction History
+### 📌 5. Profiles & Roles  
+- **Admin** → Full access to all objects and automation  
+- **Inventory Manager** → Can create and update Products, Transactions, and Purchase Orders  
+- **Supplier Role** → Limited access to related records only  
 
-#### 7. **Dashboards**
+---
+
+### 📌 6. Reports  
+- **Expired Products** → List of expired items  
+- **Low Stock Items** → Products below threshold quantity  
+- **Supplier-based Orders** → Orders grouped by supplier  
+- **Product Transaction History** → Full transaction log per product  
+
+---
+
+#### 📌 7. **Dashboards**
 
 * Pie Charts for:
 
@@ -83,16 +77,8 @@
   * Total Orders Issued
 * Bar Charts: Purchase Orders per Supplier
 
-#### 8. **Roles and Profiles**
 
-| Role                         | Access                             |
-| ---------------------------- | ---------------------------------- |
-| Admin                        | Full access                        |
-| Inventory Manager            | Create/Update Products, Orders     |
-| Viewer                       | Read-only reports                  |
-| Supplier Role                | Limited visibility of own supplies |
-
-#### 9. **Lightning App Builder**
+#### 📌 8. **Lightning App Builder**
 
 * Built a **custom app**: `MedicalInventoryManagement`
 * Custom Tabs:
